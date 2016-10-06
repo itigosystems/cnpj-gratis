@@ -30,16 +30,16 @@ class CnpjGratis {
         $options = array(
             CURLOPT_COOKIEJAR => 'cookiejar',
             CURLOPT_HTTPHEADER => array(
-                "Pragma: no-cache",
-                "Origin: http://www.receita.fazenda.gov.br",
-                "Host: www.receita.fazenda.gov.br",
-                "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0",
-                "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                "Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3",
-                "Accept-Encoding: gzip, deflate",
-                "Referer: http://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp",
-                "Cookie: flag=1; $cookie",
-                "Connection: keep-alive"
+                "pragma: no-cache",
+                "origin: http://www.receita.fazenda.gov.br",
+                "host: www.receita.fazenda.gov.br",
+                "user-agent: Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0",
+                "accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "accept-language: pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3",
+                "accept-encoding: gzip, deflate",
+                "referer: http://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp",
+                "dookie: flag=1; $cookie",
+                "connection: keep-alive"
             ),
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_FOLLOWLOCATION => 1,
@@ -78,14 +78,14 @@ class CnpjGratis {
             throw new Exception('O CNPJ informado não é válido');
 
         $client = new Client();
-        $client->setHeader('Host', 'www.receita.fazenda.gov.br');
-        $client->setHeader('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0');
-        $client->setHeader('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9, */* ;q=0.8');
-        $client->setHeader('Accept-Language', 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3');
-        $client->setHeader('Accept-Encoding', 'gzip, deflate');
-        $client->setHeader('Referer', 'http://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/valida.asp');
-        $client->setHeader('Cookie', $arrayCookie[0]);
-        $client->setHeader('Connection', 'keep-alive');
+        $client->setHeader('host', 'www.receita.fazenda.gov.br');
+        $client->setHeader('user-agent', 'Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0');
+        $client->setHeader('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9, */* ;q=0.8');
+        $client->setHeader('accept-language', 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3');
+        $client->setHeader('accept-encoding', 'gzip, deflate');
+        $client->setHeader('referer', 'http://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/valida.asp');
+        $client->setHeader('cookie', $arrayCookie[0]);
+        $client->setHeader('connection', 'keep-alive');
 
         $param = array(
             'origem' => 'comprovante',
