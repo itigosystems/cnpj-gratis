@@ -38,7 +38,7 @@ class CnpjGratis {
                 "accept-language: pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3",
                 "accept-encoding: gzip, deflate",
                 "referer: http://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp",
-                "dookie: flag=1; $cookie",
+                "cookie: flag=1; $cookie",
                 "connection: keep-alive"
             ),
             CURLOPT_RETURNTRANSFER => true,
