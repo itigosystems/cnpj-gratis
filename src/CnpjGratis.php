@@ -193,7 +193,8 @@ class CnpjGratis {
             CURLOPT_HEADER => 1,
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_SSL_VERIFYHOST => false,
-            CURLOPT_FOLLOWLOCATION => true
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_PROXY => "socks5://127.0.0.1:9050"
         ]);
 
         if (!empty($data)) {
