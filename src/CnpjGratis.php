@@ -38,7 +38,7 @@ class CnpjGratis {
 
         return array(
             'cookie' => $cookie,
-            'captchaBase64' => base64_encode($image['response'])
+            'captchaBase64' => 'data:image/png;base64,' . base64_encode($image['response'])
         );
     }
 
